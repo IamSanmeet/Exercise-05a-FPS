@@ -1,6 +1,7 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=7 format=2]
 
 [ext_resource path="res://Player/Player.gd" type="Script" id=1]
+[ext_resource path="res://Assets/shotgun.obj" type="ArrayMesh" id=2]
 
 [sub_resource type="PlaneMesh" id=1]
 
@@ -41,3 +42,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.6, 0 )
 
 [node name="Camera" type="Camera" parent="Player/Pivot"]
 current = true
+
+[node name="Gun" type="MeshInstance" parent="Player/Pivot"]
+transform = Transform( -8, 6.99382e-07, 0, 6.99382e-07, 8, 8.74228e-08, 6.11419e-14, 6.99382e-07, -1, 0.2, -0.15, -0.3 )
+mesh = ExtResource( 2 )
